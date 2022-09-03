@@ -7,7 +7,7 @@
 
 
 ## Usage
-You need to get the ckpt file and put it on your Google Drive first to use this. It can be downloaded from [HuggingFace](https://huggingface.co/CompVis/stable-diffusion).
+To run this notebook or any Stablediffusion notebook you need to get the ckpt file of the model and put it on your Google Drive. It can be downloaded from [HuggingFace](https://huggingface.co/CompVis/stable-diffusion).
 ## Acknowledgement 
 [Stable Diffusion](https://github.com/CompVis/stable-diffusion) by Robin Rombach, Andreas Blattmann, Dominik Lorenz, Patrick Esser, Björn Ommer and the [Stability.ai](https://stability.ai/) Team. [K Diffusion](https://github.com/crowsonkb/k-diffusion) by [Katherine Crowson](https://twitter.com/RiversHaveWings).
 
