@@ -68,3 +68,18 @@ The baseline of the notebook, setup, description, and image generation, is based
   <img src="/Media/7.png" width="204" />
   <img src="/Media/8.png" width="204" />
 </p>
+
+### 3. harmonics omegoid Peter Blake Vladimir Tretchikoff
+<p float="middle">
+  <img src="/Media/9.png" width="204" />
+  <img src="/Media/10.png" width="204" /> 
+  <img src="/Media/11.png" width="204" />
+  <img src="/Media/12.png" width="204" />
+</p>
+
+## To Do
+* **Hyperparameter Tuning:** The hyperparameters are barely tuned and there is a lot of performance to be had when it comes to aesthetics optimization, prompt diversity, and optimization speed. 
+
+* **Evolutionary Algorithm Tuning:** The algorithm is very basic and I have not read much on evolutionary algorithms. Here there is still a lot of room for improvement. Especially the crossover stage of the algorithm might be suboptimal the way it is done now for text.
+
+* **General Features:** There are some features I would like to add, especially having a "base" prompt that is in each population member so that you can take your favorite prompt and build on it.
