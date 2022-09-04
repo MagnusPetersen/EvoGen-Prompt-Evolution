@@ -1,10 +1,9 @@
 # EvoGen-Prompt-Evolution
 ![Evolved Prompt Output](/Media/banner.png "Evolved Prompt Output")
-https://colab.research.google.com/github/MagnusPetersen/EvoGen-Prompt-Evolution/blob/main/Notebook/EvoGen.ipynb
 ## Description & Method
 EvoGen is an evolutionary algorithm that optimizes prompts for text-to-image models for aesthetics, as assessed by @rivershavewings aethetics model.\
 Notebook:\
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MagnusPetersen/EvoGen-Prompt-Evolution/blob/main/Notebook/EvoGen.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MagnusPetersen/EvoGen-Prompt-Evolution/blob/main/Notebook/EvoGen.ipynb)\
 The algorithm is composed of three different AI models, stable diffusion as the generative model, which generates images from prompts, @rivershavewings aesthetics model that rates the resulting images and the evolutionary algorithm that created the prompts at random and then optimizes the prompts based on the rating by using the highest rated prompts to generate the next generation of prompts.
 ![Model Schema](/Media/model_schema.png "[Model Schema]")
 ## Usage
