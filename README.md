@@ -17,8 +17,9 @@ The baseline of the notebook, setup, description, and image generation, is based
 [deforum](https://discord.gg/upmXXsrwZc) notebook.
 ## Examples
 
-<p float="left">
-  <img src="/Media/1.png" width="100" />
-  <img src="/Media/2.png" width="100" /> 
-  <img src="/Media/3.png" width="100" />
+<p float="middle">
+  <img src="/Media/1.png" width="300" />
+  <img src="/Media/2.png" width="300" /> 
+  <img src="/Media/3.png" width="300" />
+  <img src="/Media/4.png" width="300" />
 </p>
