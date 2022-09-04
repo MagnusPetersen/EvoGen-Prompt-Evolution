@@ -16,7 +16,7 @@ The aesthetics model that is an integral part of this method was made by [Kather
 The baseline of the notebook, setup, description, and image generation, is based on the
 [deforum](https://discord.gg/upmXXsrwZc) notebook.
 ## Examples
-
+### trireme Fantasy Art nondefiling rhinopharyngitis canaliculization cricotracheotomy conure atheology beret Aestheticism Vicente Juan Masip Ashley Bickerton aplustria pelodytoid
 <p float="middle">
   <img src="/Media/1.png" width="204" />
   <img src="/Media/2.png" width="204" /> 
