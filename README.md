@@ -18,8 +18,8 @@ The baseline of the notebook, setup, description, and image generation, is based
 ## Examples
 
 <p float="middle">
-  <img src="/Media/1.png" width="210" />
-  <img src="/Media/2.png" width="210" /> 
-  <img src="/Media/3.png" width="210" />
-  <img src="/Media/4.png" width="210" />
+  <img src="/Media/1.png" width="205" />
+  <img src="/Media/2.png" width="205" /> 
+  <img src="/Media/3.png" width="205" />
+  <img src="/Media/4.png" width="205" />
 </p>
