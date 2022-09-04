@@ -1,11 +1,8 @@
 # EvoGen-Prompt-Evolution
 ![Evolved Prompt Output](/Media/banner.png "Evolved Prompt Output")
-## Description
-
-
-## Method
-
-
+## Description & Method
+EvoGen is an evolutionary algorithm that optimizes prompts for text-to-image models for aesthetics, as assessed by @rivershavewings aethetics model. The algorithm is composed of three different AI models, stable diffusion as the generative model, which generates images from prompts, @rivershavewings aesthetics model that rates the resulting images and the evolutionary algorithm that created the prompts at random and then optimizes the prompts based on the rating by using the highest rated prompts to generate the next generation of prompts.
+![Model Schema](/Media/model_schema.png "[Model Schema]")
 ## Usage
 ### Setup
 To run this notebook or any Stablediffusion notebook you need to get the ckpt file of the model and put it on your Google Drive. It can be downloaded from [HuggingFace](https://huggingface.co/CompVis/stable-diffusion).
@@ -16,33 +13,37 @@ General population settings, such as how many generations the algorithm runs for
 
 * **generations:** How many generations the algorithm runs for
 
-* population_count: How many prompts there are in each generation/how large each generation is
+* **population_count:** How many prompts there are in each generation/how large each generation is
 
-* prompt_length_max: Maximum prompt length when the population is initialized, during evolution this limit can be surpassed.
+* **prompt_length_max:** Maximum prompt length when the population is initialized, during evolution this limit can be surpassed.
 
-* prompt_length_min: Minimum prompt length when the population is initialized, during evolution this limit can be surpassed.
+* **prompt_length_min:** Minimum prompt length when the population is initialized, during evolution this limit can be surpassed.
 
-* artist_prop: Probability to sample from the artist list when adding or mutating a word.
+* **artist_prop:** Probability to sample from the artist list when adding or mutating a word.
 
-* genre_prop: Probability to sample from the genre list when adding or mutating a word.
+* **genre_prop:** Probability to sample from the genre list when adding or mutating a word.
 
-* custom_prop: Probability to sample from the custom user-defined list when adding or mutating a word.
+* **custom_prop:** Probability to sample from the custom user-defined list when adding or mutating a word.
 
 The difference between the sum of the three custom lists and 1 is the probability to sample from the English dictionary word list.
 
-* delete_prop: probability to delete a word per word in each prompt after each generation
+* **delete_prop:** probability to delete a word per word in each prompt after each generation
 
-* add_prop: probability to add a new word per word in each prompt after each generation from the word lists
+* **add_prop:** probability to add a new word per word in each prompt after each generation from the word lists
 
-* mutate_prop: probability to swap out a word per word in each prompt after each generation for a new word from the word lists
+* **mutate_prop:** probability to swap out a word per word in each prompt after each generation for a new word from the word lists
 
-* shuffle_prop: The probability to shuffle the order of words per prompt
+* **shuffle_prop:** The probability to shuffle the order of words per prompt
 
-* cross_prop: The cross-over probability is the probability of the parents of the next generation swapping prompt parts per parent pair
+* **cross_prop:** The cross-over probability is the probability of the parents of the next generation swapping prompt parts per parent pair
 
-* k: K denotes the rounds in the tournament selection process. A higher K value means fewer parents generate the next generation, this means a higher score increase but less diversity in the prompts.
+* **k:** K denotes the rounds in the tournament selection process. A higher K value means fewer parents generate the next generation, this means a higher score increase but less diversity in the prompts.
 
-* cutoff: Cutoff aesthetics score to save the image and prompt
+* **cutoff:** Cutoff aesthetics score to save the image and prompt
+#### Image Generation Settings
+Image generation settings have an impact on the speed and behavior of the evolutionary algorithm, the euler_a sampler in conjunction with low step size and resolution is advisable for quick prompt evolution. Good prompts can then later be used to generate higher-quality images. The parameter n_samples determines how many images are generated per prompt, the scores are then averaged. A higher n_samples slows down the generation but stabilizes the optimization.
+
+* **n_samples:** The number of samples/seeds that will be evaluated per prompt in each generation. A higher n_samples slows down the generation but stabilizes the optimization.
 
 ## Acknowledgement 
 [Stable Diffusion](https://github.com/CompVis/stable-diffusion) by Robin Rombach, Andreas Blattmann, Dominik Lorenz, Patrick Esser, Björn Ommer and the [Stability.ai](https://stability.ai/) Team. [K Diffusion](https://github.com/crowsonkb/k-diffusion) by [Katherine Crowson](https://twitter.com/RiversHaveWings).
