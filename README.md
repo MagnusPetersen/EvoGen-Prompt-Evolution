@@ -1,8 +1,9 @@
 # EvoGen-Prompt-Evolution
 ![Evolved Prompt Output](/Media/banner.png "Evolved Prompt Output")
 ## Description & Method
-EvoGen is an evolutionary algorithm that optimizes prompts for text-to-image models for aesthetics, as assessed by @rivershavewings aethetics model.\
-### Notebook:\\
+EvoGen is an evolutionary algorithm that optimizes prompts for text-to-image models for aesthetics, as assessed by @rivershavewings aethetics model.
+
+### Notebook:\
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MagnusPetersen/EvoGen-Prompt-Evolution/blob/main/Notebook/EvoGen.ipynb)
 
