@@ -7,12 +7,12 @@ EvoGen is an evolutionary algorithm that optimizes prompts for text-to-image mod
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MagnusPetersen/EvoGen-Prompt-Evolution/blob/main/Notebook/EvoGen.ipynb)
 
-The algorithm is composed of three different AI models, stable diffusion as the generative model, using the [deforum](https://discord.gg/upmXXsrwZc) generation code, which generates images from prompts, @rivershavewings aesthetics model that rates the resulting images and the evolutionary algorithm that created the prompts at random and then optimizes the prompts based on the rating by using the highest rated prompts to generate the next generation of prompts.
+The algorithm is composed of three different AI models, stable diffusion as the generative model, using the [deforum](https://discord.gg/upmXXsrwZc) and the [Stable Diffusion with Jax](https://huggingface.co/blog/stable_diffusion_jax) code, which generates images from prompts, @rivershavewings aesthetics model that rates the resulting images and the evolutionary algorithm that created the prompts at random and then optimizes the prompts based on the rating by using the highest rated prompts to generate the next generation of prompts.
 
 ![Model Schema](/Media/model_schema.png "[Model Schema]")
 ## Usage
 ### Setup
-To run this notebook or any Stablediffusion notebook you need to get the ckpt file of the model and put it on your Google Drive. It can be downloaded from [HuggingFace](https://huggingface.co/CompVis/stable-diffusion).
+To run this notebook or any Stable Diffusion notebook you need to accept the [terms of conditions](https://huggingface.co/runwayml/stable-diffusion-v1-5) of RunwayML Stable Diffusion 1.5 on Huggingface.
 ### Hyperparameters
 #### Evolutionary Algorithm Settings
 
