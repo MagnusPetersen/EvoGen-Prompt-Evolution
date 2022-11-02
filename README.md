@@ -18,9 +18,9 @@ To run this notebook or any Stable Diffusion notebook you need to accept the [te
 
 General population settings, such as how many generations the algorithm runs for, how many prompts there are in each generation, and the word length range of the prompts.
 
-* **generations:** How many generations the algorithm runs for
+* **generations:** How many generations the algorithm runs for.
 
-* **population_count:** How many prompts there are in each generation/how large each generation is
+* **population_count:** How many prompts there are in each generation/how large each generation is.
 
 * **prompt_length_max:** Maximum prompt length when the population is initialized, during evolution this limit can be surpassed.
 
@@ -34,23 +34,38 @@ General population settings, such as how many generations the algorithm runs for
 
 The difference between the sum of the three custom lists and 1 is the probability to sample from the English dictionary word list.
 
-* **delete_prop:** probability to delete a word per word in each prompt after each generation
+* **require_custom_words:** If it is set to "True" the custom list will not just serve as a list to sample from but it will be required that each prompt in the population has min_custom_words words from the list in it. 
 
-* **add_prop:** probability to add a new word per word in each prompt after each generation from the word lists
+* **min_custom_words:** The number of words from the custom list required to be in the prompt.
 
-* **mutate_prop:** probability to swap out a word per word in each prompt after each generation for a new word from the word lists
+* **use_aes_words:** Replaces the English dictionary that is the basis of the prompt generation with a curated word list derived from prompts with aethetics ratings 5 or higher from the simulacra aesthetics dataset. The base aesthetics score will be higher but I find the generations to be less interesting.
 
-* **shuffle_prop:** The probability to shuffle the order of words per prompt
+* **use_aes_engrams:** Replaces the English dictionary that is the basis of the prompt generation with a curated 2- and 3. gram list derived from prompts with aethetics ratings 5 or higher from the simulacra aesthetics dataset. If use_aes_words and use_aes_engrams are ticked both lists are concatinated.
 
-* **cross_prop:** The cross-over probability is the probability of the parents of the next generation swapping prompt parts per parent pair
+* **delete_prop:** probability to delete a word per word in each prompt after each generation.
+
+* **add_prop:** probability to add a new word per word in each prompt after each generation from the word lists.
+
+* **mutate_prop:** probability to swap out a word per word in each prompt after each generation for a new word from the word lists.
+
+* **shuffle_prop:** The probability to shuffle the order of words per prompt.
+
+* **cross_prop:** The cross-over probability is the probability of the parents of the next generation swapping prompt parts per parent pair.
 
 * **k:** K denotes the rounds in the tournament selection process. A higher K value means fewer parents generate the next generation, this means a higher score increase but less diversity in the prompts.
 
-* **cutoff:** Cutoff aesthetics score to save the image and prompt
-#### Image Generation Settings
-Image generation settings have an impact on the speed and behavior of the evolutionary algorithm, the euler_a sampler in conjunction with low step size and resolution is advisable for quick prompt evolution. Good prompts can then later be used to generate higher-quality images. The parameter n_samples determines how many images are generated per prompt, the scores are then averaged. A higher n_samples slows down the generation but stabilizes the optimization.
+* **cutoff:** Cutoff aesthetics score to save and display the image and prompt.
 
-* **n_samples:** The number of samples/seeds that will be evaluated per prompt in each generation. A higher n_samples slows down the generation but stabilizes the optimization.
+* **use_prompt:** True if you want to guide the evolution with an additional prompt and not just aesthetics.
+
+* **use_image:** True if you want to guide the evolution with an additional image prompt and not just aesthetics.
+
+* **prompt_weigth:** The weight of prompt & image prompt. For instance 0.6 means the score is the result of 60% prompt+image prompt and 40% aesthetics.
+
+#### Image Generation Settings
+Image generation settings have an impact on the speed and behavior of the evolutionary algorithm, the euler_a sampler in conjunction with low step size and resolution is advisable for quick prompt evolution. Good prompts can then later be used to generate higher-quality images.
+
+* **num_inference_steps:** The number of denoising steps. A higher step number will increase image quality but take longer to generate.
 
 ## Acknowledgement 
 [Stable Diffusion](https://github.com/CompVis/stable-diffusion) by Robin Rombach, Andreas Blattmann, Dominik Lorenz, Patrick Esser, Björn Ommer and the [Stability.ai](https://stability.ai/) Team. [K Diffusion](https://github.com/crowsonkb/k-diffusion) by [Katherine Crowson](https://twitter.com/RiversHaveWings).
@@ -58,7 +73,7 @@ Image generation settings have an impact on the speed and behavior of the evolut
 The aesthetics model that is an integral part of this method was made by [Katherine Crowson](https://twitter.com/RiversHaveWings) and can be found on her [Github account](https://github.com/crowsonkb/simulacra-aesthetic-models). 
 
 The baseline of the notebook, setup, description, and image generation, is based on the
-[deforum](https://discord.gg/upmXXsrwZc) notebook.
+[deforum](https://discord.gg/upmXXsrwZc) and the [Stable Diffusion with Jax](https://huggingface.co/blog/stable_diffusion_jax) code.
 ## Examples
 ### 1. trireme Fantasy Art nondefiling rhinopharyngitis canaliculization cricotracheotomy conure atheology beret Aestheticism Vicente Juan Masip Ashley Bickerton aplustria pelodytoid
 <p float="middle">
