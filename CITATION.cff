@@ -25,3 +25,7 @@ keywords:
   - text-to-image
   - diffusion models
   - stable diffusion
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.22013172
+    description: Concept DOI for all versions
