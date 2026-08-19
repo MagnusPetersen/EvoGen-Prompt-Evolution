@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "EvoGen-Prompt-Evolution"
+abstract: >-
+  An evolutionary algorithm that optimises prompts for text-to-image
+  diffusion models against an aesthetics predictor, combining Stable
+  Diffusion as the generative model, the Simulacra aesthetics model as
+  the fitness function, and a genetic algorithm operating over prompt
+  strings.
+type: software
+authors:
+  - family-names: Petersen
+    given-names: Magnus
+    orcid: "https://orcid.org/0000-0002-1825-0097"
+    affiliation: "Frankfurt Institute for Advanced Studies"
+version: 1.0.0
+date-released: "2022-09-01"
+license: MIT
+repository-code: "https://github.com/MagnusPetersen/EvoGen-Prompt-Evolution"
+url: "https://github.com/MagnusPetersen/EvoGen-Prompt-Evolution"
+keywords:
+  - evolutionary algorithm
+  - genetic algorithm
+  - prompt optimization
+  - text-to-image
+  - diffusion models
+  - stable diffusion
